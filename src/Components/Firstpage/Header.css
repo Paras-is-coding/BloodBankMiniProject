@@ -1,0 +1,50 @@
+#navbar{
+    height: 70px;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   box-shadow: 0 0 4px 4px black;
+   background-color: rgb(219, 4, 4);
+   color: white;
+}
+#left{
+     height: 100%;
+     width: 20%;
+     display: flex;
+     align-items: center;
+     font-size: 1.2rem;
+}
+#left span{
+    text-align: center;
+    width: 100%;
+}
+#right{
+    height: 100%;
+    display: flex;
+    justify-content: right;
+}
+#right ul{
+    display: flex;
+    align-items: center;
+    list-style: none;
+    margin-top: 0;
+    height: 100%;
+
+}
+#right ul li{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0 3rem 0 3rem;
+    font-size: 1.2rem;
+    text-decoration: none;
+
+}
+.iicon{
+    height: 40px;
+    width: 40px;
+    padding-left: 1rem;
+    margin-top: .5rem;
+}
+
+

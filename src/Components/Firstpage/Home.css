@@ -1,0 +1,14 @@
+#pd img{
+    height: 40vh;
+    width: 100vw;
+    aspect-ratio: 1;
+}
+
+#rd{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    padding-top: 5rem;
+    font-size: 1.4rem;
+}

@@ -1,0 +1,39 @@
+.bloodgroup-cards,.totals-cards{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6rem;
+    padding: 1rem;
+    padding-left: 3rem;
+}
+
+.bloodgroup-card, .totals-card{
+    height: 130px;
+    width: 240px;
+    font-size: 1.4rem;
+    box-shadow: 0 0 2px 1px rgb(157, 1, 1);
+    padding: 0 1rem 0 1rem;
+}
+.bloodgroup-card div ,.totals-card div{
+    width: 240px;
+    height: 65px;
+    display: flex;
+    
+}
+.bloodgroup-card .one,.totals-card .one{
+    align-items: center;
+    justify-content: end;
+}
+.bloodgroup-card .two{
+    align-items: center;
+    justify-content: start;
+}
+.totals-card .two{
+    flex-direction: column;
+    
+}
+
+.totals-cards{
+    border-top: 2px solid rgb(157, 1, 1);
+    margin-top: 2rem;
+
+}
