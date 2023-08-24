@@ -1,19 +1,21 @@
-import React from 'react'
-import { Routes,Route } from 'react-router-dom'
-import PatientSideNav from './PatientSideNav'
-import PatientHome from './PatientHome'
-import PatientBloodRequest from './PatientBloodRequest'
-import PatientRequestHistory from './PatientRequestHistory'
+import React from 'react';
+import { Outlet, Navigate } from 'react-router-dom'; // Import Navigate
+
+import PatientSideNav from './PatientSideNav';
+import { isLoggedIn } from '../auth';
 
 export default function PatientDashboard() {
-  return (
-    <>
-    <PatientSideNav/>
-    <Routes>
-        <Route path='patient-dashboard' element={<PatientHome/>}></Route>
-        <Route path='patient-dashboard/blood-request' element={<PatientBloodRequest/>}></Route>
-        <Route path='patient-dashboard/request-history' element={<PatientRequestHistory/>}></Route>
-    </Routes>
-    </>
-  )
+  let allow = isLoggedIn();
+
+  if (allow) {
+    return (
+      <>
+        <PatientSideNav />
+        <Outlet />
+      </>
+    );
+  } else {
+    // Redirect to the homepage using the Navigate component
+    return <Navigate to="/" />;
+  }
 }

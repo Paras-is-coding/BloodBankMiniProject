@@ -9,8 +9,6 @@ import { Routes, Route } from 'react-router-dom'
 import Donorregister from './Donorregister'
 import Patientregister from './Patientregister'
 
-
-
 export default function Main() {
   return (
     <>

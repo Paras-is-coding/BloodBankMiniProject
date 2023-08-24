@@ -4,7 +4,7 @@ import Loginform from './Loginform'
 export default function Admin() {
   return (
     <>
-    <Loginform login="ADMIN LOGIN" />   
+    <Loginform login="ADMIN LOGIN" loginAs="admin" />   
     </>
   )
 }

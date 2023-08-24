@@ -4,7 +4,7 @@ import Registerform from './Registerform'
 export default function Patientregister() {
   return (
     <>
-    <Registerform signup='PATIENT REGISTER'/>  
+    <Registerform signup='PATIENT REGISTER' categorie='patient'/>  
     </>
   )
 }

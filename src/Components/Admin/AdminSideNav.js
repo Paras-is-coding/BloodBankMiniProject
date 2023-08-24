@@ -1,39 +1,31 @@
-// import React from 'react'
-// import './AdminSideNav.css'
-
-// export default function AdminSideNav() {
-//   return (
-//     <>
-//     <ul className='side-nav-list'>
-//         <li>Home</li>
-//         <li>Donor</li>
-//         <li>Patient</li>
-//         <li>Donations</li>
-//         <li>Blood Request</li>
-//         <li>Request History</li>
-//         <li>Blood Stock</li>
-//     </ul>
-//     </>
-//   )
-// }
 import React, { useState } from 'react';
 import * as FaIcons from 'react-icons/fa';
 import * as AiIcons from 'react-icons/ai';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom'; // Import useNavigate
 import { SidebarData } from './AdminSidebarData';
 import './AdminSideNav.css';
 import { IconContext } from 'react-icons';
-import {FiLogOut} from 'react-icons/fi'
+import { FiLogOut } from 'react-icons/fi';
+
+import { doLogout } from '../auth';
 
 export default function AdminSideNav() {
   const [sidebar, setSidebar] = useState(false);
+  const navigate = useNavigate(); // Initialize useNavigate
 
   const showSidebar = () => setSidebar(!sidebar);
 
   let lstyle = {
-    textDecoration : 'none',
-    color : 'white'
-}
+    cursor:'pointer',
+    textDecoration: 'none',
+    color: 'white',
+  };
+
+  // Function to handle logout
+  const handleLogout = () => {
+    doLogout(); // Add your logout logic here (e.g., clear tokens, etc.)
+    navigate('/'); // Then navigate to the logout route
+  };
 
   return (
     <>
@@ -44,13 +36,14 @@ export default function AdminSideNav() {
           </Link>
 
           <div id='left'>
-        <span>Blood Bank Management</span>
-        </div>
-        <div id='right'>        
-            <span><Link to='/' style={lstyle}>Logout</Link></span>
-            <FiLogOut/>
-        </div>
-
+            <span>Blood Bank Management</span>
+          </div>
+          <div id='right'>
+            <span  onClick={handleLogout} style={lstyle}>
+              Logout
+            </span>
+            <FiLogOut />
+          </div>
         </div>
         <nav className={sidebar ? 'nav-menu active' : 'nav-menu'}>
           <ul className='nav-menu-items' onClick={showSidebar}>

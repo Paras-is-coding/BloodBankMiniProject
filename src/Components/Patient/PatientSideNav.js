@@ -7,16 +7,28 @@ import { SidebarData } from './PatientSidebarData';
 import '../Admin/AdminSideNav.css';
 import { IconContext } from 'react-icons';
 import {FiLogOut} from 'react-icons/fi'
+import { useNavigate } from 'react-router-dom';
+import { doLogout } from '../auth';
+
 
 export default function PatientSideNav() {
+
+  const navigate = useNavigate();
   const [sidebar, setSidebar] = useState(false);
 
   const showSidebar = () => setSidebar(!sidebar);
 
   let lstyle = {
+    cursor:'pointer',
     textDecoration : 'none',
     color : 'white'
 }
+
+ // Function to handle logout
+ const handleLogout = () => {
+  doLogout(); // Add your logout logic here (e.g., clear tokens, etc.)
+  navigate('/'); // Then navigate to the logout route
+};
 
   return (
     <>
@@ -29,10 +41,12 @@ export default function PatientSideNav() {
           <div id='left'>
         <span>Blood Bank Management</span>
         </div>
-        <div id='right'>        
-            <span><Link to='/' style={lstyle}>Logout</Link></span>
-            <FiLogOut/>
-        </div>
+        <div id='right'>
+            <span onClick={handleLogout} style={lstyle}>
+              Logout
+            </span>
+            <FiLogOut />
+          </div>
 
         </div>
         <nav className={sidebar ? 'nav-menu active' : 'nav-menu'}>

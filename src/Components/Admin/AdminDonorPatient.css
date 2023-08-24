@@ -32,21 +32,39 @@
     text-align: center;
   }
 
-  .edit-button,.delete-button{
-    display: inline;
-    padding: .5rem;
-    margin: .5rem;
-    border-radius: .5rem;
-    width: auto;
-    box-shadow: 0 0 1px 1px black;
-    background-color: blue;
-    color: white;
-  }
-  .delete-button{
-    background-color: red;
-  }
+ .edit-button, .delete-button {
+  display: inline;
+  padding: 0.5rem;
+  margin: 0.5rem;
+  border-radius: 0.5rem;
+  width: auto;
+  box-shadow: 0 0 1px 1px black;
+  color: white;
+  cursor: pointer;
+  transition: box-shadow 0.2s, background-color 0.2s;
+}
 
-  .edit-button:hover,.delete-button:hover{
-    box-shadow: 0 0 1px 1px white, 0 0 2px 2px black;
+.edit-button {
+  background-color: blue;
+}
 
-  }
+.delete-button {
+  background-color: red;
+}
+
+.edit-button:hover, .delete-button:hover {
+  box-shadow: 0 0 1px 1px white, 0 0 2px 2px black;
+}
+
+/* Additional styling to enhance attractiveness */
+.edit-button:focus, .delete-button:focus {
+  outline: none; /* Remove the default focus outline */
+}
+
+/* Style for button click effect */
+.edit-button:active, .delete-button:active {
+  transform: translateY(1rem);
+  box-shadow: none;
+}
+
+  
