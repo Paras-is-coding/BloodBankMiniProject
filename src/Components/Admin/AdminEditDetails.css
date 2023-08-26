@@ -1,0 +1,51 @@
+.edit-form-container {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  
+  .edit-form-container:hover {
+    transform: translateY(-5px);
+  }
+  
+  /* Style form fields, buttons, etc. as needed */
+  /* ... */
+  
+  .edit-controls {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .edit-button,
+  .save-button,
+  .cancel-button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  .edit-button:hover,
+  .save-button:hover,
+  .cancel-button:hover {
+    background-color: #0056b3;
+  }
+  
+  .save-button {
+    background-color: #28a745;
+  }
+  
+  .cancel-button {
+    background-color: #dc3545;
+    margin-right: 10px;
+  }
+  

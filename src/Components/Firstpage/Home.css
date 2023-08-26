@@ -1,14 +1,29 @@
-#pd img{
-    height: 40vh;
-    width: 100vw;
-    aspect-ratio: 1;
-}
 
-#rd{
+
+/* #pd img {
+    height: auto;
+    width: 100%;
+    object-fit: cover;  This will make the image stretch while maintaining aspect ratio 
+} */
+
+  
+  #rd {
     display: flex;
+    flex-direction: column; /* Added to make vertical alignment consistent */
     align-items: center;
     justify-content: center;
     width: 100vw;
-    padding-top: 5rem;
+    padding: 5rem 0; /* Adjusted padding to add space both top and bottom */
     font-size: 1.4rem;
-}
+  }
+  
+  /* Add this rule to ensure the footer stays at the bottom */
+  #root {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  
+
+
+

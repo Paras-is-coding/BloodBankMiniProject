@@ -34,44 +34,45 @@ export default function PatientHome() {
 
   return (
     <>
-      <div className='totals-cards'>
-        <div className="totals-card">
-          <div className='one'>
-            <IoIcons.IoIosHand />
-          </div>
-          <div className="two">
-            <div className="heading">Request Made.</div>
-            <div className="total">{totalRecords}</div>
-          </div>
-        </div>
-        <div className="totals-card">
-          <div className='one'>
-            <IoIcons.IoIosHand />
-          </div>
-          <div className="two">
-            <div className="heading">Pending Requests.</div>
-            <div className="total">{pendingRecords}</div>
-          </div>
-        </div>
-        <div className="totals-card">
-          <div className='one'>
-            <TiTick />
-          </div>
-          <div className="two">
-            <div className="heading">Approved Requests.</div>
-            <div className="total">{approvedRecords}</div>
-          </div>
-        </div>
-        <div className="totals-card">
-          <div className='one'>
-            <ImCancelCircle />
-          </div>
-          <div className="two">
-            <div className="heading">Rejected Requests.</div>
-            <div className="total">{rejectedRecords}</div>
-          </div>
-        </div>
-      </div>
+      <div className='bloodgroup-cards'>
+  <div className="bloodgroup-card">
+    <div className='one'>
+      <IoIcons.IoIosHand />
+    </div>
+    <div className="two">
+      <div className="heading">Request Made:</div>
+      <div className="total">{totalRecords}</div>
+    </div>
+  </div>
+  <div className="bloodgroup-card">
+    <div className='one'>
+      <IoIcons.IoIosHand />
+    </div>
+    <div className="two">
+      <div className="heading">Pending Requests:</div>
+      <div className="total">{pendingRecords}</div>
+    </div>
+  </div>
+  <div className="bloodgroup-card">
+    <div className='one'>
+      <TiTick />
+    </div>
+    <div className="two">
+      <div className="heading">Approved Requests:</div>
+      <div className="total">{approvedRecords}</div>
+    </div>
+  </div>
+  <div className="bloodgroup-card">
+    <div className='one'>
+      <ImCancelCircle />
+    </div>
+    <div className="two">
+      <div className="heading">Rejected Requests:</div>
+      <div className="total">{rejectedRecords}</div>
+    </div>
+  </div>
+</div>
+
     </>
   );
 }

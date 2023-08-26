@@ -1,5 +1,4 @@
 import React from 'react';
-import * as FaIcons from 'react-icons/fa';
 import * as AiIcons from 'react-icons/ai';
 import * as IoIcons from 'react-icons/io';
 import * as BiIcons from 'react-icons/bi';
@@ -30,21 +29,15 @@ export const SidebarData = [
     cName: 'nav-text'
   },
   {
-    title: 'Blood Request',
-    path: '/admin-dashboard/blood-request',
+    title: 'Donation Requests',
+    path: '/admin-dashboard/donation-requests',
     icon: <IoIcons.IoIosHand />,
     cName: 'nav-text'
   },
   {
-    title: 'Request History',
-    path: '/admin-dashboard/request-history',
+    title: 'Blood Requests',
+    path: '/admin-dashboard/blood-requests',
     icon: <IoIcons.IoMdTime />,
-    cName: 'nav-text'
-  },
-  {
-    title: 'Blood Stock',
-    path: '/admin-dashboard/blood-stock',
-    icon: <FaIcons.FaStore />,
     cName: 'nav-text'
   }
 ];

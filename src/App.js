@@ -8,10 +8,10 @@ import Main from './Components/Firstpage/Main';
 import AdminHome from './Components/Admin/AdminHome';
 import AdminDonor from './Components/Admin/AdminDonor';
 import AdminPatient from './Components/Admin/AdminPatient';
-import AdminBloodRequest from './Components/Admin/AdminBloodRequest';
-import AdminRequestHistory from './Components/Admin/AdminRequestHistory';
+import AdminDonationRequests from './Components/Admin/AdminDonationRequests';
+import AdminBloodRequests from './Components/Admin/AdminBloodRequests';
 import AdminDonations from './Components/Admin/AdminDonations';
-import AdminBloodStock from './Components/Admin/AdminBloodStock';
+import AdminEditDetails from './Components/Admin/AdminEditDonorDetails';
 
 import PatientHome from './Components/Patient/PatientHome';
 import PatientBloodRequest from './Components/Patient/PatientBloodRequest';
@@ -35,10 +35,9 @@ export default function App() {
         <Route path='donor' element={<AdminDonor/>}></Route>
         <Route path='patient' element={<AdminPatient/>}></Route>
         <Route path='donations' element={<AdminDonations/>}></Route>
-        <Route path='blood-request' element={<AdminBloodRequest/>}></Route>
-        <Route path='request-history' element={<AdminRequestHistory/>}></Route>
-        <Route path='request-history' element={<AdminRequestHistory/>}></Route>
-        <Route path='blood-stock' element={<AdminBloodStock/>}></Route>
+        <Route path='donation-requests' element={<AdminDonationRequests/>}></Route>
+        <Route path='blood-requests' element={<AdminBloodRequests/>}></Route>
+        <Route path='edit-details' element={<AdminEditDetails/>}></Route>
     </Route>
     <Route path='/patient-dashboard/*' element={<PatientDashboard/>}>
     <Route path='' element={<PatientHome/>}></Route>

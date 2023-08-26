@@ -8,7 +8,7 @@ import Home from './Home'
 import { Routes, Route } from 'react-router-dom'
 import Donorregister from './Donorregister'
 import Patientregister from './Patientregister'
-
+import './Main.css'
 export default function Main() {
   return (
     <>
